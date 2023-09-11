@@ -4,7 +4,7 @@ from autograd import elementwise_grad
 
 from mla.neuralnet.activations import sigmoid
 from mla.neuralnet.initializations import get_initializer
-from mla.neuralnet.layers import Layer, get_activation, ParamMixin
+from mla.neuralnet.layers import get_activation, Layer, ParamMixin
 from mla.neuralnet.parameters import Parameters
 
 """
@@ -103,8 +103,8 @@ class LSTM(Layer, ParamMixin):
 
             # (previous state * forget) + input + cell
             self.states[:, i, :] = (
-                self.states[:, i - 1, :] * self.gates["f"][:, i, :]
-                + self.gates["i"][:, i, :] * self.gates["c"][:, i, :]
+                    self.states[:, i - 1, :] * self.gates["f"][:, i, :]
+                    + self.gates["i"][:, i, :] * self.gates["c"][:, i, :]
             )
             self.outputs[:, i, :] = self.gates["o"][:, i, :] * self.activation(self.states[:, i, :])
 

@@ -1,9 +1,11 @@
 import random
-import numpy as np
+
 import matplotlib.pyplot as plt
+import numpy as np
 from sklearn import datasets
-from mla.kmeans import KMeans
+
 from mla.gaussian_mixture import GaussianMixture
+from mla.kmeans import KMeans
 
 random.seed(1)
 np.random.seed(6)

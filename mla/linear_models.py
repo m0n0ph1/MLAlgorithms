@@ -6,7 +6,7 @@ import autograd.numpy as np
 from autograd import grad
 
 from mla.base import BaseEstimator
-from mla.metrics.metrics import mean_squared_error, binary_crossentropy
+from mla.metrics.metrics import binary_crossentropy, mean_squared_error
 
 np.random.seed(1000)
 

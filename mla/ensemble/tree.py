@@ -2,7 +2,6 @@
 import random
 
 import numpy as np
-from scipy import stats
 
 from mla.ensemble.base import split, split_dataset, xgb_criterion
 
@@ -135,7 +134,6 @@ class Tree(object):
 
         self._train(X, target, max_features=max_features, min_samples_split=min_samples_split,
                     max_depth=max_depth, minimum_gain=minimum_gain)
-
 
     def _calculate_leaf_value(self, targets):
         """Find optimal value for leaf."""

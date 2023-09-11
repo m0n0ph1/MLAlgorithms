@@ -99,7 +99,7 @@ class GradientBoosting(BaseEstimator):
             # Pass multiple target values to the tree learner
             targets = {
                 # Residual values
-                "y": residuals,
+                "y"     : residuals,
                 # Actual target values
                 "actual": self.y,
                 # Predictions from previous step

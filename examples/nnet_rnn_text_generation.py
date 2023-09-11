@@ -2,15 +2,14 @@ from __future__ import print_function
 
 import logging
 import random
+import sys
 
 import numpy as np
-import sys
 
 from mla.datasets import load_nietzsche
 from mla.neuralnet import NeuralNet
-from mla.neuralnet.constraints import SmallNorm
 from mla.neuralnet.layers import Activation, Dense
-from mla.neuralnet.layers.recurrent import LSTM, RNN
+from mla.neuralnet.layers.recurrent import LSTM
 from mla.neuralnet.optimizers import RMSprop
 
 logging.basicConfig(level=logging.DEBUG)
@@ -62,7 +61,7 @@ for _ in range(25):
     start_index = random.randint(0, len(text) - maxlen - 1)
 
     generated = ""
-    sentence = text[start_index : start_index + maxlen]
+    sentence = text[start_index: start_index + maxlen]
     generated += sentence
     print('----- Generating with seed: "' + sentence + '"')
     sys.stdout.write(generated)

@@ -4,7 +4,7 @@ import autograd.numpy as np
 from autograd import elementwise_grad
 
 from mla.base import BaseEstimator
-from mla.metrics import mean_squared_error, binary_crossentropy
+from mla.metrics import binary_crossentropy, mean_squared_error
 
 np.random.seed(9999)
 
@@ -16,7 +16,7 @@ Factorization Machines http://www.csie.ntu.edu.tw/~b97053/paper/Rendle2010FM.pdf
 
 class BaseFM(BaseEstimator):
     def __init__(
-        self, n_components=10, max_iter=100, init_stdev=0.1, learning_rate=0.01, reg_v=0.1, reg_w=0.5, reg_w0=0.0
+            self, n_components=10, max_iter=100, init_stdev=0.1, learning_rate=0.01, reg_v=0.1, reg_w=0.5, reg_w0=0.0
     ):
         """Simplified factorization machines implementation using SGD optimizer."""
         self.reg_w0 = reg_w0

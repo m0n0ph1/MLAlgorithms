@@ -3,13 +3,12 @@ import logging
 from mla.datasets import load_mnist
 from mla.metrics import accuracy
 from mla.neuralnet import NeuralNet
-from mla.neuralnet.layers import Activation, Convolution, MaxPooling, Flatten, Dropout, Parameters
+from mla.neuralnet.layers import Activation, Convolution, Dropout, Flatten, MaxPooling
 from mla.neuralnet.layers import Dense
 from mla.neuralnet.optimizers import Adadelta
 from mla.utils import one_hot
 
 logging.basicConfig(level=logging.DEBUG)
-
 
 # Load MNIST dataset
 X_train, X_test, y_train, y_test = load_mnist()

@@ -3,7 +3,7 @@ import autograd.numpy as np
 from autograd import elementwise_grad
 
 from mla.neuralnet.initializations import get_initializer
-from mla.neuralnet.layers import Layer, get_activation, ParamMixin
+from mla.neuralnet.layers import get_activation, Layer, ParamMixin
 from mla.neuralnet.parameters import Parameters
 
 

@@ -2,12 +2,12 @@ try:
     from sklearn.model_selection import train_test_split
 except ImportError:
     from sklearn.cross_validation import train_test_split
+from scipy.spatial import distance
 from sklearn.datasets import make_classification
 from sklearn.datasets import make_regression
-from scipy.spatial import distance
 
 from mla import knn
-from mla.metrics.metrics import mean_squared_error, accuracy
+from mla.metrics.metrics import accuracy, mean_squared_error
 
 
 def regression():

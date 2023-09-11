@@ -19,7 +19,7 @@ References:
 
 class DQN(object):
     def __init__(
-        self, n_episodes=500, gamma=0.99, batch_size=32, epsilon=1.0, decay=0.005, min_epsilon=0.1, memory_limit=500
+            self, n_episodes=500, gamma=0.99, batch_size=32, epsilon=1.0, decay=0.005, min_epsilon=0.1, memory_limit=500
     ):
         """Deep Q learning implementation.
 

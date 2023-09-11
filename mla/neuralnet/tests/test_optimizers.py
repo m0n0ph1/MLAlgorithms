@@ -3,7 +3,7 @@ from sklearn.metrics import roc_auc_score
 from sklearn.model_selection import train_test_split
 
 from mla.neuralnet import NeuralNet
-from mla.neuralnet.layers import Dense, Activation, Dropout, Parameters
+from mla.neuralnet.layers import Activation, Dense, Dropout, Parameters
 from mla.neuralnet.optimizers import *
 from mla.utils import one_hot
 

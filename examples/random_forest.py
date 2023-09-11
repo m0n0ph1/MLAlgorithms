@@ -3,7 +3,7 @@ import logging
 import numpy as np
 from sklearn.datasets import make_classification
 from sklearn.datasets import make_regression
-from sklearn.metrics import roc_auc_score, accuracy_score
+from sklearn.metrics import accuracy_score, roc_auc_score
 
 try:
     from sklearn.model_selection import train_test_split
@@ -29,7 +29,7 @@ def classification():
 
     predictions_prob = model.predict(X_test)[:, 1]
     predictions = np.argmax(model.predict(X_test), axis=1)
-    #print(predictions.shape)
+    # print(predictions.shape)
     print("classification, roc auc score: %s" % roc_auc_score(y_test, predictions_prob))
     print("classification, accuracy score: %s" % accuracy_score(y_test, predictions))
 
